@@ -28,6 +28,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/DVL.msg"
   "msg/DVLBeam.msg"
   "msg/DVLDR.msg"
+  "msg/CommandResponse.msg"
+  "msg/ConfigCommand.msg"
+  "msg/ConfigStatus.msg"
   DEPENDENCIES builtin_interfaces std_msgs geometry_msgs
  )
 
