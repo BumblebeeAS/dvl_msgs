@@ -19,6 +19,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
 find_package(builtin_interfaces REQUIRED)
@@ -31,7 +32,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/CommandResponse.msg"
   "msg/ConfigCommand.msg"
   "msg/ConfigStatus.msg"
-  DEPENDENCIES builtin_interfaces std_msgs geometry_msgs
+  "msg/DVLOdomWithConfidence.msg"
+  DEPENDENCIES builtin_interfaces std_msgs geometry_msgs nav_msgs
  )
 
 ament_package()
